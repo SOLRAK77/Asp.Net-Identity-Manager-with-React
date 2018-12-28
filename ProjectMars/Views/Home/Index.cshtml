@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@if (Request.IsAuthenticated)
+{
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Student details</h3>
+            <div id="indexPage"></div>
+        </div>
+    </div>
+
+    @section scripts
+    {
+        <script src="~/ReactViews/Index/dist/bundle.js"></script>
+    }
+}
+else
+{
+    <h2>Welcome to ProjectMars</h2>
+}
